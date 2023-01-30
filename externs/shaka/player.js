@@ -482,13 +482,13 @@ shaka.extern.MetadataRawFrame;
 /**
  * @typedef {{
  *   key: string,
- *   data: (ArrayBuffer|string),
+ *   data: (ArrayBuffer|string|number),
  *   description: string
  * }}
  *
  * @description metadata frame parsed.
  * @property {string} key
- * @property {ArrayBuffer|string} data
+ * @property {ArrayBuffer|string|number} data
  * @property {string} description
  * @exportDoc
  */
@@ -835,7 +835,8 @@ shaka.extern.DashManifestConfiguration;
  *   ignoreManifestProgramDateTime: boolean,
  *   mediaPlaylistFullMimeType: string,
  *   useSafariBehaviorForLive: boolean,
- *   liveSegmentsDelay: number
+ *   liveSegmentsDelay: number,
+ *   sequenceMode: boolean
  * }}
  *
  * @property {boolean} ignoreTextStreamFailures
@@ -876,6 +877,11 @@ shaka.extern.DashManifestConfiguration;
  *   The default presentation delay will be calculated as a number of segments.
  *   This is the number of segments for this calculation..
  *   <i>Defaults to <code>3</code>.</i>
+ * @property {boolean} sequenceMode
+ *   If true, the media segments are appended to the SourceBuffer in
+ *   "sequence mode" (ignoring their internal timestamps).
+ *   Defaults to <code>true</code> except on WebOS 3, Tizen 2,
+ *   Tizen 3 and PlayStation 4 whose default value is <code>false</code>.
  * @exportDoc
  */
 shaka.extern.HlsManifestConfiguration;
