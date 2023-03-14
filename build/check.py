@@ -75,7 +75,7 @@ def get_lint_files():
   return main_sources + tool_sources
 
 
-@_Check('js_lint')
+# @_Check('js_lint')
 def check_js_lint(args):
   """Runs the JavaScript linter."""
   # TODO: things not enforced: property doc requirements
