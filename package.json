@@ -1,7 +1,7 @@
 {
   "name": "@loomhq/shaka-player",
   "description": "DASH/EME video player library",
-  "version": "4.9.4-loomfork",
+  "version": "4.9.4-loomfork-20240709",
   "homepage": "https://github.com/shaka-project/shaka-player",
   "author": "Google",
   "maintainers": [
